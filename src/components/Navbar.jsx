@@ -8,7 +8,7 @@ const Navbar = () => {
             <p>Velvet Pour</p>
         </a>
         <ul>
-            {[{title:}]}
+         
         </ul>
     </div>
  </nav>
