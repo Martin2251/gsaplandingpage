@@ -7,6 +7,9 @@ const Navbar = () => {
         <a href="#home" className='flex items-center gap-2'>
             <p>Velvet Pour</p>
         </a>
+        <ul>
+            {[{title:}]}
+        </ul>
     </div>
  </nav>
   )
