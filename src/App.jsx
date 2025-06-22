@@ -8,6 +8,7 @@ const App = () => {
   return (
   <main>
     <Navbar  />
+    <Hero  />
   </main>
   )
 }
