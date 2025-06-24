@@ -1,6 +1,21 @@
+import { useGSAP } from '@gsap/react'
+import { SplitText } from 'gsap/all'
 import React from 'react'
+import gsap from 'gsap'
 
 const Hero = () => {
+
+    useGSAP(() =>{
+       const heroSplit = new SplitText(".title", {
+	 type: "chars, words",
+	});
+	
+	const paragraphSplit = new SplitText(".subtitle", {
+	 type: "lines",
+	});
+
+        },[])
+    
   return (
  <section id="hero" className='noisy'>
     <h1 className='title'>Mojito</h1>
@@ -13,6 +28,16 @@ const Hero = () => {
             <p className='subtitle'>
                 Sip the spirit <br /> of summer
             </p>
+            </div>
+
+            <div className='view-cocktails'>
+                <p className='subtitle'>
+                Every cocktail on our menu is a blend of premium ingredients,
+				creative flair, and timeless recipes — designed to delight your
+				senses.
+
+                </p>
+                <a href=" #cocktails">View Cocktails</a>
             </div>
         </div>
 
