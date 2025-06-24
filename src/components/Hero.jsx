@@ -3,9 +3,12 @@ import { SplitText } from 'gsap/all'
 import React from 'react'
 import gsap from 'gsap'
 import { useRef } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 const Hero = () => {
      const videoRef = useRef();
+
+      const isMobile = useMediaQuery({ maxWidth: 767 });
 
     useGSAP(() =>{
        const heroSplit = new SplitText(".title", {
@@ -50,7 +53,8 @@ gsap
 	.to(".left-leaf", { y: -200 }, 0)
 	.to(".arrow", { y: 100 }, 0);
 
-
+    const startValue = isMobile ? "top 50%" : "center 60%";
+	const endValue = isMobile ? "120% top" : "bottom top";
 
 
         },[])
