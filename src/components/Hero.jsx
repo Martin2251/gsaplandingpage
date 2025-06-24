@@ -2,8 +2,10 @@ import { useGSAP } from '@gsap/react'
 import { SplitText } from 'gsap/all'
 import React from 'react'
 import gsap from 'gsap'
+import { useRef } from 'react'
 
 const Hero = () => {
+     const videoRef = useRef();
 
     useGSAP(() =>{
        const heroSplit = new SplitText(".title", {
@@ -54,6 +56,7 @@ gsap
         },[])
     
   return (
+    <>
  <section id="hero" className='noisy'>
     <h1 className='title'>Mojito</h1>
     <img src="/images/hero-left-leaf.png" alt="left-leaf" className='left-leaf' />
@@ -80,6 +83,16 @@ gsap
 
         </div>
  </section>
+ <div className='video absolute inset-0'>
+    <video src="/videos/input.mp4"
+    muted 
+    playsInline
+    preload='auto'
+    ref={videoRef}
+
+    />
+ </div>
+ </>
   )
 }
 
