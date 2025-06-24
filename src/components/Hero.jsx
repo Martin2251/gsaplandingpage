@@ -17,14 +17,15 @@ const Hero = () => {
     // Apply text-gradient class once before animating
 	heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
-
+// stagger can be long and will hamper performance
     	gsap.from(heroSplit.chars, {
 	 yPercent: 100,
 	 duration: 1.8,
 	 ease: "expo.out",
 	 stagger: 0.06,
 	});
-	
+
+
 	gsap.from(paragraphSplit.lines, {
 	 opacity: 0,
 	 yPercent: 100,
