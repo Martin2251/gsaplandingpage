@@ -14,6 +14,26 @@ const Hero = () => {
 	 type: "lines",
 	});
 
+    // Apply text-gradient class once before animating
+	heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+
+
+    	gsap.from(heroSplit.chars, {
+	 yPercent: 100,
+	 duration: 1.8,
+	 ease: "expo.out",
+	 stagger: 0.06,
+	});
+	
+	gsap.from(paragraphSplit.lines, {
+	 opacity: 0,
+	 yPercent: 100,
+	 duration: 1.8,
+	 ease: "expo.out",
+	 stagger: 0.06,
+	 delay: 1,
+	});
+
         },[])
     
   return (
